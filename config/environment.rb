@@ -66,5 +66,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path << Dir[File.join(RAILS_ROOT, 'my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = :de
 
+  config.action_controller.session = { :key => "_myapp_session", :secret => "biglongstring-insertextratexthere" }
   # See Rails::Configuration for more options
 end

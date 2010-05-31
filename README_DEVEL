@@ -1,3 +1,5 @@
+Things to do to install foodsoft:
+
 README for DEVELopment Project Setup
 ====================================
 
@@ -5,6 +7,12 @@ Gratulations, you have successfully cloned the foodsoft project
 from the git repository. Now you are only a few steps away from
 trying it out and then jumping into development. (This manual presumes
 you have ruby and rails setup.)
+
+(0) Set up ruby and rails
+-------------------------
+
+    $ sudo apt-get install ruby1.8 rubygems build-essential
+    $ sudo gem install rails
 
 (1) Configure datebase
 ----------------------
@@ -16,7 +24,7 @@ If you are fine with using a file-based sqlite database you are all set.
 The sqlite files (development/test/production) will reside in the "db" directory.
 You might still need to install sqlite and the respective gem, i.e. on Ubuntu do:
 
-    sudo aptitude install sqlite3 libsqlite3-dev
+    sudo aptitude install sqlite3 libsqlite3-dev 
     sudo gem install sqlite3-ruby
 
 Otherwise you would want to edit database.yml to suit your needs (MySQL whatever).
@@ -47,8 +55,16 @@ In addition to the standard Ruby on Rails gems you will need to install
 the additional gems required by running:
 
     sudo gem sources -a http://gems.github.com
-    sudo gem install haml fastercsv prawn rubyist-aasm
+    sudo gem install haml fastercsv rubyist-aasm routing-filter
+    sudo gem install -v=0.6.3 prawn
 
+(4a) Add secret to config/environment.rb
+----------------------------------------
+One line from the bottom, find the text:
+
+    config.action_controller.session = { :key => "_myapp_session", :secret => "biglongstring3414098fqijr40fu4oi23jr3098fu43foj9438yt433hg9" }
+
+and change it to be a unique key for you.
 
 (5) Create database schema
 --------------------------
