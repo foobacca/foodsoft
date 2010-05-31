@@ -62,7 +62,7 @@ the additional gems required by running:
 ----------------------------------------
 One line from the bottom, find the text:
 
-    config.action_controller.session = { :key => "_myapp_session", :secret => "biglongstring3414098fqijr40fu4oi23jr3098fu43foj9438yt433hg9" }
+    config.action_controller.session = { :key => "_myapp_session", :secret => "biglongstring...." }
 
 and change it to be a unique key for you.
 
