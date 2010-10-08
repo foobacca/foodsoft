@@ -5,6 +5,35 @@ de:
   home:
     index:
       title: Startseite
+
+  navbar:
+    start: "Start"
+    my_tasks: "Meine Aufgaben"
+    my_ordergroup: "Meine Bestellgruppe"
+    my_profile: "Mein Profil"
+    users: "Mitglieder"
+    workgroups: "Abeitsgruppen"
+    ordergroups: "Bestellgruppen"
+    messages: "Nachrichten"
+    tasks: "Aufgaben"
+    start_page: "Startseite"
+    all_pages: "Alle Seiten"
+    orders: "Bestellungen"
+    order_now: "Bestellen!"
+    my_orders: "Meine Bestellungen"
+    order_mgt: "Bestellverwaltung"
+    items: "Artikel"
+    store: "Lager"
+    suppliers: "Lieferantinnen"
+    categories: "Kategorien"
+    finance: "Finanzen"
+    manage_accounts: "Konten verwalten"
+    settle_orders: "Bestellungen abrechnen"
+    invoices: "Rechnungen"
+    admin: "Administration"
+    users: "Benutzerinnen"
+    workgroups: "Arbeitsgruppen"
+
   date:
     formats:
       default: "%d.%m.%Y"

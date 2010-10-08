@@ -12,7 +12,7 @@ you have ruby and rails setup.)
 -------------------------
 
     $ sudo apt-get install ruby1.8 rubygems build-essential
-    $ sudo gem install rails
+    $ sudo gem install -v=2.3.2 rails
 
 (1) Configure datebase
 ----------------------
