@@ -34,6 +34,26 @@ de:
     users: "Benutzerinnen"
     workgroups: "Arbeitsgruppen"
 
+  admin: 
+    title: "Administration"
+    tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
+    users:
+      all_users: "Alle Benutzerinnen"
+      new_user: "Neue Benutzerin"
+      newest_users: "Neuste benutzerinnen"
+      username: "Benutzername"  
+      name: "Name"
+      created_on: "Erstellt am"
+    groups: 
+      newest_groups: "Neuste Gruppen"
+      group_name: "Gruppenname"
+      type: "Typ"
+      members: "Mitglieder"
+      all_buyers_groups: "Alle Bestellgruppen"
+      new_buyers_group: "Neue Bestellgruppe"
+      all_working_groups: "Alle Arbeitsgruppen"
+      new_working_group: "Neue Arbeitsgruppe"
+
   date:
     formats:
       default: "%d.%m.%Y"

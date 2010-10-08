@@ -1,45 +1,45 @@
-- title "Administration"
+- title t("admin.title")
 
 %p
-  %i Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten.
+  %i= t("admin.tagline")
 .left_column{:style => "width:48%"}
   .box_title
-    %h2 Neuste Benutzerinnen
+    %h2= t("admin.users.newest_users")
   .column_content
     %table
       %tr
-        %th Benutzername
-        %th Name
-        %th Erstellt am
+        %th= t("admin.users.username")
+        %th= t("admin.users.name")
+        %th= t("admin.users.created_on")
       - for user in @users
         %tr{:class => cycle('even','odd', :name => 'users')}
           %td= link_to user.nick, [:admin, user]
           %td=h user.name
           %td= format_date(user.created_on)
     %br/
-    = link_to 'Alle Benutzerinnen', admin_users_path
+    = link_to t("admin.users.all_users"), admin_users_path
     |
-    = link_to "Neue Benutzerin", new_admin_user_path
+    = link_to t("admin.users.new_user"), new_admin_user_path
 
 .right_column{:style => "width:48%"}
   .box_title
-    %h2 Neuste Gruppen
+    %h2= t("admin.groups.newest_groups")
   .column_content
     %table
       %tr
-        %th Gruppenname
-        %th Typ
-        %th Mitglieder
+        %th= t("admin.groups.group_name")
+        %th= t("admin.groups.type")
+        %th= t("admin.groups.members")
       - for group in @groups
         %tr{:class => cycle('even','odd', :name => 'groups')}
           %td= link_to group.name, [:admin, group]
           %td= group.class.human_name
           %td= group.users.size
     %br/
-    = link_to 'Alle Bestellgruppen', admin_ordergroups_path
+    = link_to t("admin.groups.all_buyers_groups"), admin_ordergroups_path
     |
-    = link_to "Neue Bestellgruppe", new_admin_ordergroup_path
+    = link_to t("admin.groups.new_buyers_group"), new_admin_ordergroup_path
     |
-    = link_to 'Alle Arbeitsgruppen', admin_workgroups_path
+    = link_to t("admin.groups.all_working_groups"), admin_workgroups_path
     |
-    = link_to "Neue Arbeitsgruppe", new_admin_workgroup_path
+    = link_to t("admin.groups.new_working_group"), new_admin_workgroup_path
