@@ -9,10 +9,10 @@
 %table.list
   %thead
     %tr
-      %th Name
-      %th Kontakt
-      %th Adresse
-      %th Mitglieder
+      %th= t("g.name")
+      %th= t("g.contact")
+      %th= t("g.address")
+      %th= t("g.members")
       %th
   %tbody
     - for ordergroup in @ordergroups
@@ -22,7 +22,7 @@
         %td= link_to_gmaps ordergroup.contact_address
         %td= ordergroup.users.size
         %td
-          = link_to image_tag('b_users.png', :size => '16x16',  :border => "0", :alt => 'Mitlglieder bearbeiten'), memberships_admin_ordergroup_path(ordergroup)
-          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => 'Gruppe bearbeiten'), edit_admin_ordergroup_path(ordergroup))
-          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => 'Gruppe löschen'), [:admin, ordergroup], |
-                         :confirm => 'Willst du ' + ordergroup.name + ' wirklich löschen?', :method => :delete) |
+          = link_to image_tag('b_users.png', :size => '16x16',  :border => "0", :alt => t("admin.groups.edit_members") ), memberships_admin_ordergroup_path(ordergroup)
+          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => t("admin.ordergroups.edit_ordergroup") ), edit_admin_ordergroup_path(ordergroup))
+          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => t("admin.ordergroups.delete_ordergroup") ), [:admin, ordergroup], |
+                         :confirm => t("admin.groups.start_delete_confirm")+ ' ' + ordergroup.name + ' ' + t("admin.groups.end_delete_confirm"), :method => :delete) |

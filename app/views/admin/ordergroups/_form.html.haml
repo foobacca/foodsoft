@@ -15,6 +15,6 @@
         = @form.text_field :contact_address
 
   %br{ :style => "clear:both" }
-  = submit_tag "Speichern"
+  = submit_tag t("g.save")
   |
-  = link_to "Abbrechen", admin_ordergroups_path
+  = link_to t("g.cancel"), admin_ordergroups_path
