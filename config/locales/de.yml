@@ -35,6 +35,12 @@ de:
     admin: "Administration"
     users: "Benutzerinnen"
     workgroups: "Arbeitsgruppen"
+    name: "Name"
+    description: "Beschreibung"
+    save: "Speichern"
+    cancel: "Abbrechen"
+    new_category: "Neue Kategorie"
+    article_categories: "Artikelkategorien"
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -43,7 +49,6 @@ de:
       new_user: "Neue Benutzerin"
       newest_users: "Neuste benutzerinnen"
       username: "Benutzername"  
-      name: "Name"
       created_on: "Erstellt am"
     groups: 
       newest_groups: "Neuste Gruppen"

@@ -1,7 +1,7 @@
 <table>
   <tr>
-    <th>Name</th>
-    <th>Beschreibung</th>
+    <th><%= t("g.name") %></th>
+    <th><%= t("g.description") %></th>
     <th colspan="2"></th>
   </tr>
 <% for article_category in ArticleCategory.find(:all) -%>
@@ -21,7 +21,7 @@
 <% end -%>
 </table>
 <br />
-<%= link_to_remote 'Neue Kategorie', :url => new_article_category_path,
+<%= link_to_remote t("g.new_category"), :url => new_article_category_path,
                                     :method => :get,
                                     :before => "Element.show('loader')",
                                     :success => "Element.hide('loader')" %>
