@@ -1,5 +1,5 @@
 %p
-  Gefundene Artikel:
+  = t("g.items_found"):
   %b= @total
 
 %p
@@ -16,18 +16,18 @@
     %tr
       %th
       %th[sort_td_class_helper "name"]
-        = sort_link_helper "Name", "name"
+        = sort_link_helper t("g.name"), "name"
       %th
       %th[sort_td_class_helper "category"]
-        = sort_link_helper "Kategorie", "category"
+        = sort_link_helper t("g.category"), "category"
       %th[sort_td_class_helper "unit"]
-        = sort_link_helper "Einheit", "unit"
+        = sort_link_helper t("g.unit"), "unit"
       %th[sort_td_class_helper "note"]
-        = sort_link_helper "Notiz", "note"
-      %th{:style => "width: 4em;"} Gebgr.
-      %th{:style => "width: 4em;"} Preis
-      %th{:style => "width: 3.5em;"} MwSt
-      %th{:style => "width: 4em;"} Pfand
+        = sort_link_helper t("g.note"), "note"
+      %th{:style => "width: 4em;"}= t("g.size")
+      %th{:style => "width: 4em;"}= t("g.price")
+      %th{:style => "width: 3.5em;"}= t("g.tax")
+      %th{:style => "width: 4em;"}= t("g.deposit")
       %th{:style => "width: 3em;"}
       
   %tbody#listbody
@@ -41,10 +41,10 @@
           %td{:colspan => '11'}
             = check_box_tag :checkall, 1, false, :onclick => 'checkUncheckAll(this)'
             %select{:name => "selected_action"}
-              %option{:value => '', :selected => 'selected'} Aktion wählen ...
-              %option{:value => "destroy", :onclick => "if (confirm('Willst Du wirklich alle gewählten Artikel löschen?')) { this.up('form').submit(); }; return false;"} Artikel löschen
-              %option{:value => "setNotAvailable", :onclick => "this.up('form').submit()"} Artikel sind nicht mehr verfügbar
-              %option{:value => "setAvailable", :onclick => "this.up('form').submit()"} Artikel sind verfügbar
+              %option{:value => '', :selected => 'selected'}= t("g.select_action") + " ..."
+              %option{:value => "destroy", :onclick => "if (confirm(t('item.confirm_delete'))) { this.up('form').submit(); }; return false;"}= t("item.delete_item")
+              %option{:value => "setNotAvailable", :onclick => "this.up('form').submit()"}= t("item.no_longer_available")
+              %option{:value => "setAvailable", :onclick => "this.up('form').submit()"}= t("item.available")
               
             = hidden_field_tag 'supplier_id', @supplier.id
 

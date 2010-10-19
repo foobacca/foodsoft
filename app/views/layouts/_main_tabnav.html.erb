@@ -11,7 +11,7 @@
       { :name => "Foodcoop", :url => tasks_path,
         :active => ["foodcoop", "tasks", "messages", "foodcoop/ordergroups", "foodcoop/workgroups", "foodcoop/users"],
         :subnav => [
-          { :name => t("g.users"), :url => foodcoop_users_path},
+          { :name => t("g.members"), :url => foodcoop_users_path},
           { :name => t("g.workgroups"), :url => foodcoop_workgroups_path},
           { :name => t("g.ordergroups"), :url => foodcoop_ordergroups_path},
           { :name => t("g.messages"), :url => messages_path},
@@ -55,7 +55,7 @@
         :active => ["admin/"],
         :access_denied? => (!u.role_admin?),
         :subnav => [
-          { :name => t("g.users"), :url => admin_users_path },
+          { :name => t("g.members"), :url => admin_users_path },
           { :name => t("g.ordergroups"), :url => admin_ordergroups_path },
           { :name => t("g.workgroups"), :url => admin_workgroups_path }
         ]

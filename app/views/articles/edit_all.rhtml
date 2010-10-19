@@ -14,10 +14,10 @@
     <h2></h2>
   </div>
   <div class="box column_content">
-    <div id="links"><%= link_to 'zurück zur Liste', supplier_articles_path(@supplier) -%></div>
+    <div id="links"><%= link_to t("g.back_to_list"), supplier_articles_path(@supplier) -%></div>
     <p>
-    	<i>
-    		Pflichtfelder sind: Name, Einheit, (netto) Preis und Bestellnummer.
+    	<i> 
+          <%= t("item.required_fields_are") %>
 			</i>
 		</p>
     <% form_tag(update_all_supplier_articles_path(@supplier)) do %>
