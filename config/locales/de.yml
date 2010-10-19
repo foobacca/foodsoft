@@ -6,7 +6,9 @@ de:
     index:
       title: Startseite
 
-  navbar:
+  # g is for General or Glossary - words and phrases that appear in lots of
+  # places
+  g:
     start: "Start"
     my_tasks: "Meine Aufgaben"
     my_ordergroup: "Meine Bestellgruppe"
@@ -35,7 +37,6 @@ de:
     workgroups: "Arbeitsgruppen"
 
   admin: 
-    title: "Administration"
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
     users:
       all_users: "Alle Benutzerinnen"

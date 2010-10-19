@@ -1,63 +1,63 @@
 <%
   u = @current_user
   tabs = [
-      { :name => t("navbar.start"), :url => root_path, :active => ["index", "home"],
+      { :name => t("g.start"), :url => root_path, :active => ["index", "home"],
         :subnav => [
-          { :name => t("navbar.my_tasks"), :url => user_tasks_path },
-          { :name => t("navbar.my_ordergroup"), :url => my_ordergroup_path, :access_denied? => (!u.ordergroup)},
-          { :name => t("navbar.my_profile"), :url => my_profile_path}
+          { :name => t("g.my_tasks"), :url => user_tasks_path },
+          { :name => t("g.my_ordergroup"), :url => my_ordergroup_path, :access_denied? => (!u.ordergroup)},
+          { :name => t("g.my_profile"), :url => my_profile_path}
         ]
       },
       { :name => "Foodcoop", :url => tasks_path,
         :active => ["foodcoop", "tasks", "messages", "foodcoop/ordergroups", "foodcoop/workgroups", "foodcoop/users"],
         :subnav => [
-          { :name => t("navbar.users"), :url => foodcoop_users_path},
-          { :name => t("navbar.workgroups"), :url => foodcoop_workgroups_path},
-          { :name => t("navbar.ordergroups"), :url => foodcoop_ordergroups_path},
-          { :name => t("navbar.messages"), :url => messages_path},
-          { :name => t("navbar.tasks"), :url => tasks_path}
+          { :name => t("g.users"), :url => foodcoop_users_path},
+          { :name => t("g.workgroups"), :url => foodcoop_workgroups_path},
+          { :name => t("g.ordergroups"), :url => foodcoop_ordergroups_path},
+          { :name => t("g.messages"), :url => messages_path},
+          { :name => t("g.tasks"), :url => tasks_path}
         ]
       },
       { :name => "Wiki", :url => wiki_path, :active => ["pages", "wiki"],
         :subnav => [
-          { :name => t("navbar.start_page"), :url => wiki_path },
-          { :name => t("navbar.all_pages"), :url => all_pages_path }
+          { :name => t("g.start_page"), :url => wiki_path },
+          { :name => t("g.all_pages"), :url => all_pages_path }
         ]
       },
-      { :name => t("navbar.orders"), :url => u.ordergroup ? ordering_path : orders_path,
+      { :name => t("g.orders"), :url => u.ordergroup ? ordering_path : orders_path,
         :active => ["orders", "ordering"],
         :subnav => [
-          { :name => t("navbar.order_now"), :url => ordering_path },
-          { :name => t("navbar.my_orders"), :url => my_orders_path },
-          { :name => t("navbar.order_mgt"), :url => orders_path, :access_denied? => (!u.role_orders?) }
+          { :name => t("g.order_now"), :url => ordering_path },
+          { :name => t("g.my_orders"), :url => my_orders_path },
+          { :name => t("g.order_mgt"), :url => orders_path, :access_denied? => (!u.role_orders?) }
         ]
       },
-      { :name => t("navbar.items"), :url => suppliers_path,
+      { :name => t("g.items"), :url => suppliers_path,
         :active => ["articles", "suppliers", "deliveries", "article_categories", "stockit", "stock_takings"],
         :access_denied? => (!u.role_article_meta? && !u.role_suppliers?),
         :subnav => [
-          { :name => t("navbar.items"), :url => suppliers_path },
-          { :name => t("navbar.store"), :url => stock_articles_path },
-          { :name => t("navbar.suppliers"), :url => suppliers_path, :access_denied? => (!u.role_suppliers?) },
-          { :name => t("navbar.categories"), :url => article_categories_path }
+          { :name => t("g.items"), :url => suppliers_path },
+          { :name => t("g.store"), :url => stock_articles_path },
+          { :name => t("g.suppliers"), :url => suppliers_path, :access_denied? => (!u.role_suppliers?) },
+          { :name => t("g.categories"), :url => article_categories_path }
         ]
       },
-      { :name => t("navbar.finance"), :url => finance_root_path,
+      { :name => t("g.finance"), :url => finance_root_path,
         :active => ["finance/invoices", "finance/transactions", "finance/balancing"],
         :access_denied? => (!u.role_finance?),
         :subnav => [
-          { :name => t("navbar.manage_accounts"), :url => finance_transactions_path },
-          { :name => t("navbar.settle_orders"), :url => finance_balancing_path },
-          { :name => t("navbar.invoices"), :url => finance_invoices_path }
+          { :name => t("g.manage_accounts"), :url => finance_transactions_path },
+          { :name => t("g.settle_orders"), :url => finance_balancing_path },
+          { :name => t("g.invoices"), :url => finance_invoices_path }
         ]
       },
-      { :name => t("navbar.admin"), :url => admin_root_path,
+      { :name => t("g.admin"), :url => admin_root_path,
         :active => ["admin/"],
         :access_denied? => (!u.role_admin?),
         :subnav => [
-          { :name => t("navbar.users"), :url => admin_users_path },
-          { :name => t("navbar.ordergroups"), :url => admin_ordergroups_path },
-          { :name => t("navbar.workgroups"), :url => admin_workgroups_path }
+          { :name => t("g.users"), :url => admin_users_path },
+          { :name => t("g.ordergroups"), :url => admin_ordergroups_path },
+          { :name => t("g.workgroups"), :url => admin_workgroups_path }
         ]
       }
     ]
