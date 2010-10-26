@@ -55,7 +55,8 @@ In addition to the standard Ruby on Rails gems you will need to install
 the additional gems required by running:
 
     sudo gem sources -a http://gems.github.com
-    sudo gem install haml fastercsv rubyist-aasm routing-filter
+    sudo gem install haml fastercsv rubyist-aasm 
+    sudo gem install -v=0.0.1 routing-filter
     sudo gem install -v=0.6.3 prawn
 
 (4a) Add secret to config/environment.rb
@@ -78,6 +79,10 @@ and change it to be a unique key for you.
 
 (7) Try it out!
 ---------------	
-Start the WEBrick server to try it out:
+Start the WEBrick server to try it out. You need to be in the root directory of foodsoft.
 	
 	script/server	
+
+Now go to your web browser and open http://localhost:3000/ and you should have foodsoft up
+and running. The admin user has username 'admin' and password 'secret'. Obviously you 
+should change this on a live site.
