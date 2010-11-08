@@ -66,6 +66,7 @@ de:
     select_action: "Aktion wählen"
     back_to_list: "zurück zur Liste"
     available: "verfügbar"
+    search_by_name: "Suche in Name:"
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -76,6 +77,10 @@ de:
       username: "Benutzername"  
       name: "Name"
       created_on: "Erstellt am"
+      intro1: "Hier kannst du Benutzer_innen"
+      intro2: ", bearbeiten und natürlich auch löschen."
+      create_new: "neu Anlegen"
+      users_overview: "Benutzerinnenübersicht"
     groups: 
       newest_groups: "Neuste Gruppen"
       group_name: "Gruppenname"
