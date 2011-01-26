@@ -89,6 +89,9 @@ de:
     ordergroups:
       edit_ordergroups: "Bestellgruppe bearbeiten JAJAJAJAJA"
 
+  deliveries:
+    create_delivery: "Lieferung anlegen"
+
   date:
     formats:
       default: "%d.%m.%Y"

@@ -1,7 +1,7 @@
 .left_column(style="width:55%")
   - form_for([@supplier,@delivery]) do |f|
     .box_title
-      %h2 Lieferung anlegen
+      %h2= t("deliveries.create_delivery")
     .column_content
       = f.error_messages
       = f.hidden_field :supplier_id
