@@ -10,6 +10,7 @@ de:
   # places
   g:
     start: "Start"
+    foodcoop: "Foodcoop"
     my_tasks: "Meine Aufgaben"
     my_ordergroup: "Meine Bestellgruppe"
     my_profile: "Mein Profil"
@@ -19,6 +20,7 @@ de:
     ordergroup: "BBestellgruppe"
     ordergroups: "Bestellgruppen"
     messages: "Nachrichten"
+    write_message: "Nachricht schreiben"
     tasks: "Aufgaben"
     start_page: "Startseite"
     all_pages: "Alle Seiten"
@@ -32,6 +34,7 @@ de:
     categories: "Kategorien"
     finance: "Finanzen"
     manage_accounts: "Konten verwalten"
+    update_account: "Konten aktualisieren"
     settle_orders: "Bestellungen abrechnen"
     invoices: "Rechnungen"
     admin: "Administration"
@@ -61,6 +64,7 @@ de:
     back_to_list: "zurück zur Liste"
     available: "verfügbar"
     search_by_name: "Suche in Name:"
+    direct_to: "Direkt zu ..."
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -81,6 +85,7 @@ de:
       group_name: "Gruppenname"
       type: "Typ"
       members: "Mitglieder"
+      new_member: "Neues Mitglied"
       all_buyers_groups: "Alle Bestellgruppen"
       new_buyers_group: "Neue Bestellgruppe"
       all_working_groups: "Alle Arbeitsgruppen"
@@ -91,6 +96,19 @@ de:
 
   deliveries:
     create_delivery: "Lieferung anlegen"
+
+  finance:
+    financial: "Finanzbereich"
+
+  items:
+    item_management: "Artikelverwaltung"
+    update_item: "Artikel aktualisieren"
+    store_mgt: "Lagerverwaltung"
+    manage_suppliers: "Lieferanten verwalten"
+
+  orders:
+    orders_overview: "Bestellübersicht"
+    stop_orders: "Bestellungen beenden"
 
   date:
     formats:
