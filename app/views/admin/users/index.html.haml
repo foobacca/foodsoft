@@ -1,20 +1,19 @@
 %h1 Admin/Benutzerinnen
 %p
-  %i
-    Hier kannst du Benutzer_innen
-    = link_to 'neu Anlegen', new_admin_user_path
-    , bearbeiten und natürlich auch löschen.
+  %i= t("admin.users.intro1")
+  %i= link_to t("admin.users.create_new"), new_admin_user_path
+  %i= t("admin.users.intro2")
 #newUser{:style => "display:none;"}
   .box_title
-    %h2 Neue Benutzerinn
+    %h2= t("admin.users.new_user")
   .column_content#userForm
 .left_column{:style => "width:100%"}
   .box_title
-    %h2 Benutzerinnenübersicht
+    %h2= t("admin.users.users_overview")
   .column_content
     #user_filter
       %form{:name=>"sform", :action=>"", :style=>"display:inline;"}
-        %label{:for => 'article_name'} Suche in Name : 
+        %label{:for => 'article_name'}= t("g.search_by_name") 
         = text_field_tag("query", params['query'], :size => 10 )
         
       = observe_field 'query',  :frequency => 2, |
@@ -25,4 +24,4 @@
         :method => :get |
     #table
       = render :partial => "users"
-  %p= link_to 'Neue Benutzerin', new_admin_user_path
+  %p= link_to t("admin.users.new_user"), new_admin_user_path
