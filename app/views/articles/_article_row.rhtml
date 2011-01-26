@@ -9,8 +9,8 @@
 <td><%=h truncate(@article.note, :length => 11) -%></td>
 <td><%= @article.unit_quantity -%></td>
 <td class="currency">
-  <acronym title="<%= t("g.last_changed") %>: <%= format_date(@article.updated_at) -%>
-    | <%= t("g.gross") %>: <%= number_to_currency(@article.gross_price) -%>">
+  <acronym title="zuletzt geändert: <%= format_date(@article.updated_at) -%>
+    | Brutto: <%= number_to_currency(@article.gross_price) -%>">
     <%= number_to_currency(@article.price) -%>
   </acronym>
 </td>
@@ -22,6 +22,6 @@
   <%= remote_link_to icon(:delete, :onclick => "checkRow('#{@article.id.to_s}')"),
                      :url => [@supplier, @article],
                      :method => :delete,
-                     :confirm => t("g.are_you_sure") %>
+                     :confirm => 'Bist du sicher?' %>
 </td>
      

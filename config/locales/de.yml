@@ -9,19 +9,14 @@ de:
   # g is for General or Glossary - words and phrases that appear in lots of
   # places
   g:
-    contact: "Kontakt"
-    address: "Adresse"
-    name: "Name"
-    save: "Spiechern"
-    cancel:  "Abbrechen"
     start: "Start"
     my_tasks: "Meine Aufgaben"
     my_ordergroup: "Meine Bestellgruppe"
     my_profile: "Mein Profil"
-    members: "Mitglieder"
+    users: "Mitglieder"
     workgroup: "Arbeitsgruppe"
-    workgroups: "Abeitsgruppen"
-    ordergroup: "Bestellgruppe"
+    workgroups: "Arbeitsgruppen"
+    ordergroup: "BBestellgruppe"
     ordergroups: "Bestellgruppen"
     messages: "Nachrichten"
     tasks: "Aufgaben"
@@ -34,7 +29,6 @@ de:
     items: "Artikel"
     store: "Lager"
     suppliers: "Lieferantinnen"
-    category: "Kategorie"
     categories: "Kategorien"
     finance: "Finanzen"
     manage_accounts: "Konten verwalten"
@@ -43,32 +37,10 @@ de:
     admin: "Administration"
     users: "Benutzerinnen"
     workgroups: "Arbeitsgruppen"
-    name: "Name"
-    description: "Beschreibung"
-    save: "Speichern"
-    remove: "Entfernen"
-    cancel: "Abbrechen"
-    new_category: "Neue Kategorie"
-    article_categories: "Artikelkategorien"
-    last_changed: "zuletzt geändert"
-    gross: "Brutto"
-    overview: "Übersicht"
-    delete: "Löschen"
-    are_you_sure: "Bist du sicher?"
-    items_found: "Gefundene Artikel"
-    unit: "Einheit"
-    note: "Notiz"
-    size: "Gebgr."
-    packet_size: "Gebindegröße"
-    price: "Preis"
-    tax: "MwSt"
-    deposit: "Pfand"
-    select_action: "Aktion wählen"
-    back_to_list: "zurück zur Liste"
-    available: "verfügbar"
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
+
     users:
       all_users: "Alle Benutzerinnen"
       new_user: "Neue Benutzerin"
@@ -76,6 +48,7 @@ de:
       username: "Benutzername"  
       name: "Name"
       created_on: "Erstellt am"
+
     groups: 
       newest_groups: "Neuste Gruppen"
       group_name: "Gruppenname"
@@ -85,34 +58,9 @@ de:
       new_buyers_group: "Neue Bestellgruppe"
       all_working_groups: "Alle Arbeitsgruppen"
       new_working_group: "Neue Arbeitsgruppe"
-      edit_members: "Mitglieder bearbeiten"
-      start_delete_confirm: "Willst du"
-      end_delete_confirm: "wirklich löschen?" 
-      send_message: "Nachricht senden"
 
     ordergroups:
-      edit_ordergroup: "Bestellgruppe bearbeiten"
-      delete_ordergroup: "Bestellgruppe löschen"
-      here_you_can: "Hier kannst du"
-      create_new_ordergroups: "neue Bestellgruppen anlegen"
-      create_ordergroup: "Bestellgruppe anlegen"
-      edit_and_delete_groups: "anlegen, Gruppen bearbeiten und löschen."
-      please_note_the: "Beachte dabei den"
-      difference_between_working_groups_and_order_groups: "Unterschied zwischen Gruppe und Bestellgruppe:"
-      difference_between_groups_explanation_start: "Eine Bestellgruppe hat ein Konto und kann Essen bestellen. In einer"
-      eg_sorting_group: "z.b. Sortiergruppe"
-      difference_between_groups_explanation_end: "koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten. Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören."
-      groups_overview: "Bestellgruppenübersicht"
-      new_ordergroup: "Neue Bestellgruppe"
-
-  item:
-   delete_item: "Artikel löschen"
-   confirm_delete: "Willst Du wirklich alle gewählten Artikel löschen?"
-   no_longer_available: "Artikel sind nicht mehr verfügbar"
-   available: "Artikel sind verfügbar"
-   used_in_order: "wird in laufenden Bestellungen verwendet und kann nicht gelöscht werden."
-   first_remove_article: "Bitte zuerst den Artikel aus den Bestellungen"
-   required_fields_are: "Pflichtfelder sind: Name, Einheit, (netto) Preis und Bestellnummer"
+      edit_ordergroups: "Bestellgruppe bearbeiten JAJAJAJAJA"
 
   date:
     formats:
