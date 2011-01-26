@@ -1,19 +1,19 @@
 #start_nav{:style => "float:right"}
-  %h2 Aufgabenmenü
+  %h2= t("g.task_menu")
   %ul
     %li
-      Aktionen
+      = t("g.actions")
       %ul
-        %li= link_to "Neue Aufgabe erstellen", :action => "new"
+        %li= link_to t("g.create_new_task"), :action => "new"
     %li 
-      Seiten
+      = t("g.pages")
       %ul
-        %li= link_to "Meine Aufgaben", user_tasks_path
-        %li= link_to "Alle Aufgaben", tasks_path
-        %li= link_to "Erledigt Aufgaben (Archiv)", archive_tasks_path
+        %li= link_to t("g.my_tasks"), user_tasks_path
+        %li= link_to t("g.all_tasks"), tasks_path
+        %li= link_to t("g.completed_tasks"), archive_tasks_path
 
     %li
-      Gruppenaufgaben
+      = t("g.group_tasks")
       %ul
         - for group in Workgroup.all
           %li= link_to group.name, :controller => 'tasks', :action => "workgroup", :id => group

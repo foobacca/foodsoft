@@ -1,35 +1,35 @@
-- title "Aufgabe im Detail"
+- title t("g.task_details")
 = render :partial => "nav"
 
 #task{:style => 'width:70%'}
   %table
     %tr
-      %td{:style => "width: 10em"} Name
+      %td{:style => "width: 10em"}= t("g.name")
       %td
         %b= @task.name
     %tr
-      %td{:style => "vertical-align:top;"} Beschreibung
+      %td{:style => "vertical-align:top;"}= t("g.description")
       %td= simple_format(@task.description)
     %tr
-      %td Fälligkeitsdatum
+      %td= t("g.due_date")
       %td= format_date(@task.due_date)
     %tr
-      %td Verantwortliche Menschen
+      %td= t("g.responsible_people")
       %td= render :partial => "assignments"
     %tr
-      %td Arbeitsgruppe
+      %td= t("g.workgroup")
       %td
         - if @task.workgroup
           = link_to @task.workgroup.name, :action => "workgroup", :id => @task.workgroup
           
     %tr
       %td{:colspan => "2"} 
-        %div{:style => "float:left"} Als erledigt markieren
+        %div{:style => "float:left"}= t("g.mark_as_done")
         - form_for :task, :url => {:action => "update_status", :id => @task} do |f|
-          = f.check_box :done, {:onchange => "submit()", :title => "Die Aufgabe wandert in das Archiv"}
+          = f.check_box :done, {:onchange => "submit()", :title => t("g.move_to_archive")}
          
     
   %p
-    = link_to "Bearbeiten", edit_task_path(@task)
+    = link_to t("g.edit"), edit_task_path(@task)
     | 
-    = link_to "Löschen", task_path(@task), :method => :delete, :confirm => "Die Aufgabe wirklich löschen?"
+    = link_to t("g.delete"), task_path(@task), :method => :delete, :confirm => t("g.really_delete_task")
