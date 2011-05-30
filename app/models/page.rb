@@ -1,18 +1,3 @@
-# == Schema Information
-#
-# Table name: pages
-#
-#  id           :integer         not null, primary key
-#  title        :string(255)
-#  body         :text
-#  permalink    :string(255)
-#  lock_version :integer         default(0)
-#  updated_by   :integer
-#  redirect     :integer
-#  created_at   :datetime
-#  updated_at   :datetime
-#
-
 class Page < ActiveRecord::Base
 
   belongs_to :user, :foreign_key => 'updated_by'
@@ -32,9 +17,13 @@ class Page < ActiveRecord::Base
 
   named_scope :non_redirected, :conditions => {:redirect => nil}
   named_scope :no_parent, :conditions => {:parent_id => nil}
-  
+
   def self.permalink(title)
     title.gsub(/[\/\.,;@\s]/, "_").gsub(/[\"\']/, "")
+  end
+
+  def homepage?
+    permalink == "Home"
   end
 
   def set_permalink
@@ -62,3 +51,20 @@ class Page < ActiveRecord::Base
     end
   end
 end
+
+# == Schema Information
+#
+# Table name: pages
+#
+#  id           :integer(4)      not null, primary key
+#  title        :string(255)
+#  body         :text
+#  permalink    :string(255)
+#  lock_version :integer(4)      default(0)
+#  updated_by   :integer(4)
+#  redirect     :integer(4)
+#  parent_id    :integer(4)
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+

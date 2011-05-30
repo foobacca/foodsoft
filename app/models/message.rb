@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: messages
-#
-#  id             :integer         not null, primary key
-#  sender_id      :integer
-#  recipients_ids :text
-#  subject        :string(255)     not null
-#  body           :text
-#  email_state    :integer         default(0), not null
-#  private        :boolean
-#  created_at     :datetime
-#
-
 class Message < ActiveRecord::Base
   belongs_to :sender, :class_name => "User", :foreign_key => "sender_id"
 
@@ -89,3 +75,19 @@ class Message < ActiveRecord::Base
     end
   end
 end
+
+
+# == Schema Information
+#
+# Table name: messages
+#
+#  id             :integer(4)      not null, primary key
+#  sender_id      :integer(4)
+#  recipients_ids :text
+#  subject        :string(255)     not null
+#  body           :text
+#  email_state    :integer(4)      default(0), not null
+#  private        :boolean(1)      default(FALSE)
+#  created_at     :datetime
+#
+

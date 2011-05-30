@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: tasks
-#
-#  id             :integer         not null, primary key
-#  name           :string(255)     default(""), not null
-#  description    :string(255)
-#  due_date       :date
-#  done           :boolean
-#  workgroup_id   :integer
-#  assigned       :boolean
-#  created_on     :datetime        not null
-#  updated_on     :datetime        not null
-#  required_users :integer         default(1)
-#
-
 class Task < ActiveRecord::Base
   has_many :assignments, :dependent => :destroy
   has_many :users, :through => :assignments
@@ -27,6 +11,7 @@ class Task < ActiveRecord::Base
   attr_protected :users
   
   validates_length_of :name, :minimum => 3
+  validates_numericality_of :duration, :required_users, :only_integer => true, :greater_than => 1
 
   after_save :update_ordergroup_stats
   
@@ -83,7 +68,26 @@ class Task < ActiveRecord::Base
 
   def update_ordergroup_stats
     if done
-      users.each { |u| u.ordergroup.update_stats! }
+      users.each { |u| u.ordergroup.update_stats! if u.ordergroup }
     end
   end
 end
+
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id             :integer(4)      not null, primary key
+#  name           :string(255)     default(""), not null
+#  description    :string(255)
+#  due_date       :date
+#  done           :boolean(1)      default(FALSE)
+#  workgroup_id   :integer(4)
+#  assigned       :boolean(1)      default(FALSE)
+#  created_on     :datetime        not null
+#  updated_on     :datetime        not null
+#  required_users :integer(4)      default(1)
+#  weekly         :boolean(1)
+#  duration       :integer(4)      default(1)
+#
+
