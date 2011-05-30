@@ -1,44 +1,44 @@
-%h2 Direkt zu ...
+%h2= t("g.direct_to")
 %ul
   %li
-    Foodcoop
+    = t("g.foodcoop")
     %ul
-      %li= link_to "Mitglieder", foodcoop_users_path
-      %li= link_to "Meine Aufgaben", user_tasks_path
-      %li= link_to "Nachricht schreiben", :controller => "messages", :action => "new"
+      %li= link_to t("g.users"), foodcoop_users_path
+      %li= link_to t("g.my_tasks"), user_tasks_path
+      %li= link_to t("g.write_message"), :controller => "messages", :action => "new"
   
   // Orders
   - has_ordergroup = !@current_user.ordergroup.nil?
   - has_orders_role = @current_user.role_orders?
   - if has_ordergroup || has_orders_role
     %li
-      Bestellungen
+      = t("g.orders")
       %ul
         - if has_ordergroup
-          %li= link_to "Bestellübersicht", :controller => "ordering"
+          %li= link_to t("orders.orders_overview"), :controller => "ordering"
         - if has_orders_role
-          %li= link_to "Bestellungen beenden", :controller => 'orders'
+          %li= link_to t("orders.stop_orders"), :controller => 'orders'
   // Articles
   - if @current_user.role_article_meta? || @current_user.role_suppliers?
     %li
-      Artikelverwaltung
+      = t("items.item_management")
       %ul
-        %li= link_to "Artikel aktualisieren", suppliers_path
-        %li= link_to "Lagerverwaltung", :controller => 'stockit'
-        %li= link_to "Lieferanten verwalten", suppliers_path
+        %li= link_to t("items.update_item"), suppliers_path
+        %li= link_to t("items.store_mgt"), :controller => 'stockit'
+        %li= link_to t("items.manage_suppliers"), suppliers_path
   
   // Finance
   - if @current_user.role_finance?
     %li
-      Finanzbereich
+      = t("finance.financial")
       %ul
-        %li= link_to "Konten aktualisieren", new_collection_finance_transactions_path
-        %li= link_to "Bestellungen abrechnen", finance_root_path
+        %li= link_to t("g.update_account"), new_collection_finance_transactions_path
+        %li= link_to t("g.settle_orders"), finance_root_path
   
   // Administration
   - if @current_user.role_admin?
     %li 
-      Administration
+      = t("g.admin")
       %ul
-        %li= link_to "Neue Bestellgruppe", new_admin_ordergroup_path
-        %li= link_to "Neues Mitglied", new_admin_user_path
+        %li= link_to t("admin.groups.new_buyers_group"), new_admin_ordergroup_path
+        %li= link_to t("admin.groups.new_member"), new_admin_user_path

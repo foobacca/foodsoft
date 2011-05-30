@@ -2,21 +2,20 @@
 
 %p
   %i
-    =t("admin.ordergroups.here_you_can")
-    =link_to t("admin.ordergroups.create_new_ordergroups"), new_admin_ordergroup_path
-    =t("admin.ordergroups.edit_and_delete_groups")
-
+    Hier kannst du
+    = link_to 'neue Bestellgruppen', new_admin_ordergroup_path
+    anlegen, Gruppen bearbeiten und löschen.
     
 %p
-  =t("admin.ordergroups.please_note_the")
-  %em=t("admin.ordergroups.difference_between_working_groups_and_order_groups")
-  =t("admin.ordergroups.difference_between_groups_explanation_start")
-  %em= link_to t("g.workgroup"), admin_workgroups_path
-  = t("admin.ordergroups.eg_sorting_group")
-  = t("admin.ordergroups.difference_between_groups_explanation_end")
+  Beachte dabei den <em>Unterschied zwischen Gruppe und Bestellgruppe</em>:
+  Eine Bestellgruppe hat ein Konto und kann Essen bestellen. In einer
+  %em= link_to 'Arbeisgruppe', admin_workgroups_path
+  (z.b. 'Soritiergruppe')
+  koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten.
+  Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören.
 .left_column{:style => "width:100%"}
   .box_title
-    %h2= t("admin.ordergroups.groups_overview")
+    %h2 Gruppenübersicht
   .column_content
     #group_filter
       %form{:name=>"sform", :action=>"", :style=>"display:inline;"}
@@ -32,4 +31,4 @@
         :method => :get |
     #ordergroups
       = render :partial => "ordergroups"
-  = link_to t("admin.ordergroups.new_ordergroup"), new_admin_ordergroup_path
+  = link_to 'Neue Arbeits', new_admin_ordergroup_path

@@ -1,4 +1,4 @@
-- title "Meine Aufgaben"
+- title t("g.my_tasks")
 = render :partial => "nav"
 
 - @tasks = @unaccepted_tasks
@@ -12,7 +12,7 @@
     
 .left_column{:style => "width:75%"}
   .box_title 
-    %h2 Anstehende Aufgaben
+    %h2=t("g.outstanding_tasks")
   .column_content
     - @tasks = @accepted_tasks
     - unless @tasks.empty?

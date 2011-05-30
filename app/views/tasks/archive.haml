@@ -1,13 +1,13 @@
-- title "Aufgabenarchiv"
+- title t("g.task_archive")
 = render :partial => "nav"
 
 = will_paginate @orders
 %br/
 %table{:style => "width: 76%"}
   %tr
-    %th Fälligkeitsdatum
-    %th Betreff
-    %th Verantwortliche Menschen
+    %th= t("g.due_date")
+    %th= t("g.subject")
+    %th= t("g.responsible_people")
     %th 
   - for task in @tasks
     %tr{:class => cycle('even','odd')}

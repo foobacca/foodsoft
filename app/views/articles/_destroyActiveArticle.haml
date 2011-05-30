@@ -1,9 +1,9 @@
 %tr.edit_inline{:id=> "edit_"+@article.id.to_s}
   %td{:colspan=>"10"}
     =h @article.name
-    = t("item.used_in_order")
-    = t("item.first_remove_article")
-    = link_to t("g.remove"), :controller => 'orders', :action => 'edit', :id => @order
+    wird in laufenden Bestellungen verwendet und kann nicht gelöscht werden.
+    Bitte zuerst den Artikel aus den Bestellungen
+    = link_to "entfernen", :controller => 'orders', :action => 'edit', :id => @order
     oder
-    = link_to_function t("g.cancel"), "Element.remove('edit_#{@article.id.to_s}')"
+    = link_to_function 'abbrechen', "Element.remove('edit_#{@article.id.to_s}')"
   
