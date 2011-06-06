@@ -60,6 +60,10 @@ After that you get the other gems easily with (from project root):
 
     bundle install
 
+For Debian/Ubuntu the bundle program may not be in the path, but you can do:
+
+    /var/lib/gems/1.8/bin/bundle install
+
 (4a) Add secret to config/environment.rb
 ----------------------------------------
 One line from the bottom, find the text:
