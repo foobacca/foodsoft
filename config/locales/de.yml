@@ -11,13 +11,14 @@ de:
     my_tasks: "Meine Aufgaben"
     my_ordergroup: "Meine Bestellgruppe"
     my_profile: "Mein Profil"
-    users: "Mitglieder"
+    members: "Mitglieder"
     workgroup: "Arbeitsgruppe"
     workgroups: "Arbeitsgruppen"
     ordergroup: "Bestellgruppe"
     ordergroups: "Bestellgruppen"
     messages: "Nachrichten"
     write_message: "Nachricht schreiben"
+    send_message: "Nachricht senden"
     tasks: "Aufgaben"
     start_page: "Startseite"
     all_pages: "Alle Seiten"
@@ -85,9 +86,17 @@ de:
     edit: "Bearbeiten"
     really_delete_task: "Die Aufgabe wirklich löschen?"
     manage_tasks_for: "Aufgaben verwalten für"
-    or: "oder"
-    submit: "Absenden"
-    close: "Schließen"
+    or: oder
+    submit: Absenden
+    close: Schließen
+    login: Login
+    name: Name
+    email: Email
+    person: Person
+    phone: Telefon
+    settings: Einstellungen
+    yes: ja
+    no: nein
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -103,6 +112,16 @@ de:
       intro2: ", bearbeiten und natürlich auch löschen."
       create_new: "neu Anlegen"
       users_overview: "Benutzerinnenübersicht"
+      access_to: "Zugriff auf"
+      last_login: "Letzter login"
+      edit_user: 'Benutzer in bearbeiten'
+      delete_user: 'Benutzer in löschen'
+      # between these two is user.name
+      confirm_delete_user1: Willst du
+      confirm_delete_user2: "wirklich löschen?"
+      member_since: Mitglied seit
+      user_has_access_to: Benutzerin hat Zugriff auf
+      group_membership: Gruppenabos
     groups: 
       newest_groups: "Neuste Gruppen"
       group_name: "Gruppenname"
@@ -115,7 +134,7 @@ de:
       new_working_group: "Neue Arbeitsgruppe"
 
     ordergroups:
-      edit_ordergroups: "Bestellgruppe bearbeiten JAJAJAJAJA"
+      edit_ordergroups: "Bestellgruppe bearbeiten"
 
   deliveries:
     create_delivery: "Lieferung anlegen"

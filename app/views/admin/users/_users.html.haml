@@ -9,11 +9,11 @@
 %table.list
   %thead
     %tr
-      %th Login
-      %th Name
-      %th Email
-      %th Zugriff auf
-      %th Letzter login
+      %th= t("g.login")
+      %th= t("g.name")
+      %th= t("g.email")
+      %th= t("admin.users.access_to")
+      %th= t("admin.user.last_login")
       %th{:style => "width:3em"}
   %tbody
     - for user in @users 
@@ -25,7 +25,7 @@
         %td=h format_roles(user)
         %td=h format_time(user.last_login)
         %td
-          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => 'Benutzer_in bearbeiten', :title => 'Benutzer_in bearbeiten'), edit_admin_user_path(user))
-          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => 'Benutzer_in löschen', :title => 'Benutzer_in löschen'), | 
+          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => t('admin.users.edit_user'), :title => t('admin.users.edit_user')), edit_admin_user_path(user))
+          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => t('admin.users.delete_user'), :title => t('admin.users.delete_user')), | 
             [:admin, user], |
-            :confirm => 'Willst du ' + user.name + ' wirklich löschen?', :method => :delete) |
+            :confirm => t('admin.users.confirm_delete_user1') + user.name + t('admin.users.confirm_delete_user2'), :method => :delete) |
