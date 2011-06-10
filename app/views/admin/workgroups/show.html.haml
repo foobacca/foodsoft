@@ -1,16 +1,16 @@
-- title "Arbeitsgruppe #{@workgroup.name}"
+- title= t('g.workgroup') +' '+ @workgroup.name
 .left_column{:style => "width:45em"}
   .box_title
-    %h2 Übersicht
+    %h2= t('g.overview')
   .column_content
     = render :partial => 'shared/group', :locals => { :group => @workgroup }
 
     %p
-      = link_to 'Gruppe bearbeiten', edit_admin_workgroup_path(@workgroup)
+      = link_to t('admin.groups.edit_working_group', edit_admin_workgroup_path(@workgroup)
       |
-      = link_to 'Löschen', [:admin, @workgroup], :confirm => 'Bist Du sicher?', :method => :delete
+      = link_to t('g.delete'), [:admin, @workgroup], :confirm => t('g.are_you_sure', :method => :delete
       |
-      = link_to 'Nachricht senden', :controller => 'messages', :action => 'group', :id => @workgroup
+      = link_to t('g.send_message'), :controller => 'messages', :action => 'group', :id => @workgroup
       |
-      = link_to 'Mitglieder bearbeiten', memberships_admin_workgroup_path(@workgroup)
-%p{:style => "clear:both"}= link_to "Gruppenübersicht", admin_workgroups_path
+      = link_to t('admin.groups.edit_membership'), memberships_admin_workgroup_path(@workgroup)
+%p{:style => "clear:both"}= link_to t('admin.groups.group_overview'), admin_workgroups_path

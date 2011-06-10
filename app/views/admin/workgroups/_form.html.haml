@@ -1,30 +1,30 @@
 - form_for [:admin, @workgroup] do |@form|
   - render :layout => 'shared/group_form' do
     %div{:style => "float:right;width:40%"}
-      %h3 Gruppe hat Zugriff auf
+      %h3= t('admin.groups.group_has_access_to')
       %table
         %tr
           %td
-            = @form.label :role_admin, "Administration"
+            = @form.label :role_admin, t('g.admin')
           %td= @form.check_box :role_admin
         %tr
           %td
-            = @form.label :role_finance, "Finanzen"
+            = @form.label :role_finance, t('g.finance')
           %td= @form.check_box :role_finance
         %tr
           %td
-            = @form.label :role_suppliers, "Lieferantenverwaltung"
+            = @form.label :role_suppliers, t('suppliers.supplier_management')
           %td= @form.check_box :role_suppliers
         %tr
           %td
-            = @form.label :role_article_meta, "Artikelverwaltung"
+            = @form.label :role_article_meta, t('items.item_management')
           %td= @form.check_box :role_article_meta
         %tr
           %td
-            = @form.label :role_orders, "Bestellungsverwaltung"
+            = @form.label :role_orders, t('orders.order_management')
           %td= @form.check_box :role_orders
 
   %br{ :style => "clear:both" }
-  = submit_tag "Speichern"
+  = submit_tag t('g.submit')
   |
-  = link_to "Abbrechen", admin_workgroups_path
+  = link_to t('g.cancel'), admin_workgroups_path

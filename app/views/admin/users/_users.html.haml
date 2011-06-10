@@ -28,4 +28,4 @@
           = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => t('admin.users.edit_user'), :title => t('admin.users.edit_user')), edit_admin_user_path(user))
           = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => t('admin.users.delete_user'), :title => t('admin.users.delete_user')), | 
             [:admin, user], |
-            :confirm => t('admin.users.confirm_delete_user1') + user.name + t('admin.users.confirm_delete_user2'), :method => :delete) |
+            :confirm => t('admin.confirm_delete1') + user.name + t('admin.confirm_delete2'), :method => :delete) |

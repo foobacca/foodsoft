@@ -1,25 +1,22 @@
-- title "List workgroups"
+- title= t("list_workgroups")
 
 %p
   %i
-    Hier kannst du
-    = link_to 'neue Arbeitsgruppen', new_admin_workgroup_path
-    anlegen, Gruppen bearbeiten und löschen.
+    = t('admin.groups.intro1')
+    = link_to t('admin.groups.new_working_group'), new_admin_workgroup_path
+    = t('admin.groups.intro2')
     
 %p
-  Beachte dabei den <em>Unterschied zwischen Gruppe und Bestellgruppe</em>:
-  Eine
-  %em= link_to 'Bestellgruppe', '/admin/ordergroups'
-  hat ein Konto und kann Essen bestellen. In einer Arbeitsgruppe (z.b. 'Soritiergruppe')
-  koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten.
-  Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören.
+  = t('admin.groups.details1')
+  %em= link_to t('g.ordergroup'), '/admin/ordergroups'
+  = t('admin.groups.details2')
 .left_column{:style => "width:100%"}
   .box_title
-    %h2 Gruppenübersicht
+    %h2= t('admin.groups.group_overview')
   .column_content
     #group_filter
       %form{:name=>"sform", :action=>"", :style=>"display:inline;"}
-        %label{:for => 'workgroup_name'} Suche in Name :
+        %label{:for => 'workgroup_name'}= t('admin.search_by_name') :
         = text_field_tag("query", params['query'], :size => 10 )
         
       = observe_field 'query',  :frequency => 2, |
@@ -31,4 +28,4 @@
         :method => :get |
     #workgroups
       = render :partial => "workgroups"
-  = link_to 'Neue Arbeits', new_admin_workgroup_path
+  = link_to t('admin.groups.new_groups'), new_admin_workgroup_path

@@ -100,6 +100,9 @@ de:
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
+    confirm_delete1: Willst du
+    confirm_delete2: "wirklich löschen?"
+    search_by_name: Suche in Name
 
     users:
       all_users: "Alle Benutzerinnen"
@@ -117,12 +120,11 @@ de:
       edit_user: 'Benutzer in bearbeiten'
       delete_user: 'Benutzer in löschen'
       # between these two is user.name
-      confirm_delete_user1: Willst du
-      confirm_delete_user2: "wirklich löschen?"
       member_since: Mitglied seit
       user_has_access_to: Benutzerin hat Zugriff auf
       group_membership: Gruppenabos
     groups: 
+      edit_working_group: Arbeitsgruppe bearbeiten
       newest_groups: "Neuste Gruppen"
       group_name: "Gruppenname"
       type: "Typ"
@@ -132,6 +134,19 @@ de:
       new_buyers_group: "Neue Bestellgruppe"
       all_working_groups: "Alle Arbeitsgruppen"
       new_working_group: "Neue Arbeitsgruppe"
+      group_has_access_to: Gruppe hat Zugriff auf
+      list_working_groups: List workgroups
+      group_overview: Gruppenübersicht
+      create_group: Erstelle Arbeitsgruppe
+      edit_membership: Mitglieder bearbeiten
+      delete_group: Gruppe löschen
+      new_groups: Neue Arbeits
+      intro1: Hier kannst du
+      intro2: anlegen, Gruppen bearbeiten und löschen.
+      details1: "Beachte dabei den <em>Unterschied zwischen Gruppe und Bestellgruppe</em>: Eine"
+      details2: "hat ein Konto und kann Essen bestellen. In einer Arbeitsgruppe (z.b. 'Soritiergruppe')
+        koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten.
+          Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören."
 
     ordergroups:
       edit_ordergroups: "Bestellgruppe bearbeiten"
@@ -151,11 +166,15 @@ de:
     item_management: "Artikelverwaltung"
     update_item: "Artikel aktualisieren"
     store_mgt: "Lagerverwaltung"
-    manage_suppliers: "Lieferanten verwalten"
 
   orders:
     orders_overview: "Bestellübersicht"
+    order_management: Bestellungsverwaltung
     stop_orders: "Bestellungen beenden"
+  
+  suppliers:
+    manage_suppliers: "Lieferanten verwalten"
+    supplier_management: Lieferantenverwaltung
 
   date:
     formats:

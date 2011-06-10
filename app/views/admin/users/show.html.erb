@@ -37,7 +37,7 @@
     </div>
     <p style="clear:both">
     <%= link_to t('g.edit'), edit_admin_user_path(@user) %>
-    | <%= link_to t('g.delete'), [:admin, @user], :confirm => t('admin.users.confirm_delete_user1') +' '+  @user.first_name +' '+ t('admin.users.confirm_delete_user2'), :method => :delete %>
+    | <%= link_to t('g.delete'), [:admin, @user], :confirm => t('admin.confirm_delete1') +' '+  @user.first_name +' '+ t('admin.confirm_delete2'), :method => :delete %>
     | <%= link_to t('g.send_message'), user_message_path(@user.id) %>
     </p>
   </div>

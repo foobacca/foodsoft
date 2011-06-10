@@ -9,9 +9,9 @@
 %table.list
   %thead
     %tr
-      %th Name
-      %th Mitglieder
-      %th Zugriff auf
+      %th= t('g.name')
+      %th= t('g.members')
+      %th= t('admin.users.access_to')
       %th
   %tbody
     - for workgroup in @workgroups
@@ -20,7 +20,7 @@
         %td= workgroup.users.size
         %td= format_roles(workgroup)
         %td
-          = link_to image_tag('b_users.png', :size => '16x16',  :border => "0", :alt => 'Mitlglieder bearbeiten'), memberships_admin_workgroup_path(workgroup)
-          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => 'Gruppe bearbeiten'), edit_admin_workgroup_path(workgroup))
-          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => 'Gruppe löschen'), [:admin, workgroup], |
-                         :confirm => 'Willst du ' + workgroup.name + ' wirklich löschen?', :method => :delete) |
+          = link_to image_tag('b_users.png', :size => '16x16',  :border => "0", :alt => t('admin.groups.edit_membership')), memberships_admin_workgroup_path(workgroup)
+          = link_to(image_tag('b_edit.png', :size => "16x16", :border => "0", :alt => t('admin.groups.edit_working_group')), edit_admin_workgroup_path(workgroup))
+          = link_to(image_tag('b_drop.png', :size => "16x16", :border => "0", :alt => t('admin.groups.delete_group'), [:admin, workgroup], |
+                         :confirm => t('admin.confirm_delete1') +' '+ workgroup.name +' '+ t('admin.comfirm_delete2'), :method => :delete) |
