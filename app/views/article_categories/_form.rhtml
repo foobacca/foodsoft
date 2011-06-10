@@ -5,8 +5,8 @@
   <%= @f.error_messages %>
   <table>
    <tr>
-     <th>Name</th>
-     <th>Beschreibung</th>
+     <th><%= t('g.name') -%></th>
+     <th><%= t('g.description') -%>Beschreibung</th>
    </tr>
    <tr>
      <td>
@@ -19,6 +19,6 @@
   </table>
 
   <br />
-  <%= submit_tag "Speichern" %> | <%= link_to_function("Abbrechen", "Element.hide('category_form')") %>
+  <%= submit_tag t('g.save') %> | <%= link_to_function(t('cancel'), "Element.hide('category_form')") %>
 <% end %>
 
