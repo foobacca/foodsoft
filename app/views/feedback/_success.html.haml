@@ -1,4 +1,4 @@
-%h2 Nachricht wurde verschickt!
+%h2= t("feedback.message_was_sent")
 
-%p Vielen Dank, Deine Nachricht wurde soeben dem Foodcooft Team zugestellt.
-%p= link_to_function "Schließen", "Element.hide('ajax_box')"
+%p= t("feedback.thanks_for_your_message")
+%p= link_to_function t("g.close"), "Element.hide('ajax_box')"

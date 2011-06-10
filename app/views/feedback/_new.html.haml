@@ -1,8 +1,8 @@
-%h2 Fehler gefunden? Vorschlag? Idee? Kritik?
+%h2= t("feedback.found_a_bug")
 
 - form_remote_tag :url => {:action => "create"}, :before => "Element.show('loader')", :success => "Element.hide('loader')" do
   %p
     = text_area_tag :message, nil, :size => "40x15"
-  = submit_tag "Absenden"
-  oder
-  = link_to_function "Abbrechen", "Element.hide('ajax_box')"
+  = submit_tag t("g.submit")
+  = t("g.or")
+  = link_to_function t("g.cancel"), "Element.hide('ajax_box')"

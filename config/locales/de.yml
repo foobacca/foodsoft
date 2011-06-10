@@ -85,6 +85,9 @@ de:
     edit: "Bearbeiten"
     really_delete_task: "Die Aufgabe wirklich löschen?"
     manage_tasks_for: "Aufgaben verwalten für"
+    or: "oder"
+    submit: "Absenden"
+    close: "Schließen"
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -116,6 +119,11 @@ de:
 
   deliveries:
     create_delivery: "Lieferung anlegen"
+  
+  feedback:
+    found_a_bug: "Fehler gefunden? Vorschlag? Idee? Kritik?"
+    message_was_sent: "Nachricht wurde verschickt!"
+    thanks_for_your_message: "Vielen Dank, Deine Nachricht wurde soeben dem Foodcooft Team zugestellt."
 
   finance:
     financial: "Finanzbereich"
