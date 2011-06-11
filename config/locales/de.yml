@@ -102,8 +102,7 @@ de:
     settings: Einstellungen
     yes: ja
     no: nein
-    username: "Benutzername"
-    telephone: "Telefon"
+    username: Benutzername
   
   foodcoop:
       ordergroups_title: "Bestellgruppen der Foodcoop"
@@ -138,7 +137,6 @@ de:
       all_users: "Alle Benutzerinnen"
       new_user: "Neue Benutzerin"
       newest_users: "Neuste benutzerinnen"
-      username: "Benutzername"  
       name: "Name"
       created_on: "Erstellt am"
       intro1: "Hier kannst du Benutzer_innen"
@@ -183,7 +181,6 @@ de:
       send_message: "Nachricht senden"
 
     ordergroups:
-      edit_ordergroups: "Bestellgruppe bearbeiten"
       edit_ordergroup: "Bestellgruppe bearbeiten"
       delete_ordergroup: "Bestellgruppe löschen"
       here_you_can: "Hier kannst du"

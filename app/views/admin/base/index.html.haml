@@ -8,8 +8,8 @@
   .column_content
     %table
       %tr
-        %th= t("admin.users.username")
-        %th= t("admin.users.name")
+        %th= t("g.username")
+        %th= t("g.name")
         %th= t("admin.users.created_on")
       - for user in @users
         %tr{:class => cycle('even','odd', :name => 'users')}
