@@ -4,11 +4,11 @@
   .column_content
     = render :partial => 'shared/group', :locals => { :group => workgroup }
     %p
-      = link_to "Alle Aufgaben zeigen", :controller => "/tasks", :action => "workgroup", :id => workgroup
+      = link_to t("foodcoop.show_all_tasks"), :controller => "/tasks", :action => "workgroup", :id => workgroup
       |
-      = link_to "Mitgliedern eine Nachricht schicken", :controller => '/messages', :action => 'group', :id => workgroup
+      = link_to t("foodcoop.send_message_to_ordergroup"), :controller => '/messages', :action => 'group', :id => workgroup
       - if workgroup.member?(@current_user)
         |
-        = link_to "Gruppe bearbeiten", edit_foodcoop_workgroup_path(workgroup)
+        = link_to t("foodcoop.edit_group"), edit_foodcoop_workgroup_path(workgroup)
         |
-        = link_to "Mitglieder bearbeiten", memberships_foodcoop_workgroup_path(workgroup)
+        = link_to t("admin.groups.edit_members"), memberships_foodcoop_workgroup_path(workgroup)

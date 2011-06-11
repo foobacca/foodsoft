@@ -10,14 +10,14 @@
 %table.list
   %thead
     %tr
-      %th Name
-      %th Mitglieder
-      %th zuletzt bestellt
+      %th= t("g.name")
+      %th= t("g.members")
+      %th= t("foodcoop.last_order")
 
   %tbody
     - for ordergroup in @ordergroups
       %tr{:class => cycle('even','odd', :name => 'ordergroup')}
-        %td= link_to h(ordergroup.name), group_message_path(ordergroup), :title => "Bestellgruppe eine Nachricht schicken"
+        %td= link_to h(ordergroup.name), group_message_path(ordergroup), :title => t("foodcoop.send_message_to_ordergroup") 
         %td=h ordergroup.users.collect { |u| u.nick }.join(", ")
         %td
           - order = ordergroup.orders.first(:order => 'starts DESC')

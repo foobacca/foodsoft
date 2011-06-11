@@ -6,13 +6,17 @@ de:
   # g is for General or Glossary - words and phrases that appear in lots of
   # places
   g:
+    contact: "Kontakt"
+    address: "Adresse"
     start: "Start"
     foodcoop: "Foodcoop"
     my_tasks: "Meine Aufgaben"
     my_ordergroup: "Meine Bestellgruppe"
     my_profile: "Mein Profil"
+    profile: "Einstellungen"
     members: "Mitglieder"
     workgroup: "Arbeitsgruppe"
+    workgroup_s: "Arbeitsgruppe(n)"
     workgroups: "Arbeitsgruppen"
     ordergroup: "Bestellgruppe"
     ordergroups: "Bestellgruppen"
@@ -29,6 +33,7 @@ de:
     items: "Artikel"
     store: "Lager"
     suppliers: "Lieferantinnen"
+    category: "Kategorie"
     categories: "Kategorien"
     finance: "Finanzen"
     manage_accounts: "Konten verwalten"
@@ -97,6 +102,31 @@ de:
     settings: Einstellungen
     yes: ja
     no: nein
+    username: "Benutzername"
+    telephone: "Telefon"
+  
+  foodcoop:
+      ordergroups_title: "Bestellgruppen der Foodcoop"
+      summary: "Übersicht"
+      only_active_groups: "Nur aktive:"
+      only_active_groups_explanation: "(mindestens einmal in den letzten 3 Monaten bestellt)"
+      last_order: "zuletzt bestellt"
+      #should that be "latest order??" - no internet! - Tom
+      send_message_to_ordergroup: "Bestellgruppe eine Nachricht schicken"
+      users_title: "Mitglieder der Foodcoop"
+      write_message_to_foodcoop_members: "Hier kannst Du den Mitgliedern Deiner Foodcoop eine Nachricht schreiben."
+      in_order_to_show_contact_details_enable_in_profile1: "Damit Deine Kontaktdaten einzusehen sind, musst Du sie unter "
+      in_order_to_show_contact_details_enable_in_profile2: "freigeben."
+      sort_by_ordergroup: "nach Bestellgruppe sortieren"
+      send_user_an_email: "Send user an email"
+      edit_group: "Gruppe bearbeiten"
+      click_here_add_members1: "Mitglieder kannst du "
+      click_here_link_text: "hier"
+      click_here_add_members2: "hinzufügen."
+      only_edit_groups_if_member: "Das bearbeiten von Gruppen ist nur für Mitglieder der Gruppe möglich. "
+      message_group_if_want_to_join: "Wenn du einer Gruppe beitreten willst, dann schreib doch den Mitgliedern eine Nachricht."
+      show_all_tasks: "Alle Aufgaben zeigen"
+      send_message_to_ordergroup: "Mitgliedern eine Nachricht schicken"
 
   admin: 
     tagline: "Hier kannst Du die Gruppen und Benutzerinnen der Foodsoft verwalten"
@@ -117,7 +147,7 @@ de:
       users_overview: "Benutzerinnenübersicht"
       access_to: "Zugriff auf"
       last_login: "Letzter login"
-      edit_user: 'Benutzer in bearbeiten'
+      edit_user: 'Benutzerin bearbeiten'
       delete_user: 'Benutzer in löschen'
       # between these two is user.name
       member_since: Mitglied seit
@@ -147,9 +177,27 @@ de:
       details2: "hat ein Konto und kann Essen bestellen. In einer Arbeitsgruppe (z.b. 'Soritiergruppe')
         koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten.
           Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören."
+      edit_members: "Mitglieder bearbeiten"
+      start_delete_confirm: "Willst du"
+      end_delete_confirm: "wirklich löschen?" 
+      send_message: "Nachricht senden"
 
     ordergroups:
       edit_ordergroups: "Bestellgruppe bearbeiten"
+      edit_ordergroup: "Bestellgruppe bearbeiten"
+      delete_ordergroup: "Bestellgruppe löschen"
+      here_you_can: "Hier kannst du"
+      create_new_ordergroups: "neue Bestellgruppen anlegen"
+      create_ordergroup: "Bestellgruppe anlegen"
+      edit_and_delete_groups: "anlegen, Gruppen bearbeiten und löschen."
+      please_note_the: "Beachte dabei den"
+      difference_between_working_groups_and_order_groups: "Unterschied zwischen Gruppe und Bestellgruppe:"
+      difference_between_groups_explanation_start: "Eine Bestellgruppe hat ein Konto und kann Essen bestellen. In einer"
+      eg_sorting_group: "z.b. Sortiergruppe"
+      difference_between_groups_explanation_end: "koordinieren sich die Mitglieder mittels Aufgaben und Nachrichten. Nutzer_innen können immer nur einer Bestellgruppe, aber beliebig vielen anderen Gruppen angehören."
+      groups_overview: "Bestellgruppenübersicht"
+      new_ordergroup: "Neue Bestellgruppe"
+     
 
   deliveries:
     create_delivery: "Lieferung anlegen"
@@ -175,6 +223,15 @@ de:
   suppliers:
     manage_suppliers: "Lieferanten verwalten"
     supplier_management: Lieferantenverwaltung
+
+  item:
+   delete_item: "Artikel löschen"
+   confirm_delete: "Willst Du wirklich alle gewählten Artikel löschen?"
+   no_longer_available: "Artikel sind nicht mehr verfügbar"
+   available: "Artikel sind verfügbar"
+   used_in_order: "wird in laufenden Bestellungen verwendet und kann nicht gelöscht werden."
+   first_remove_article: "Bitte zuerst den Artikel aus den Bestellungen"
+   required_fields_are: "Pflichtfelder sind: Name, Einheit, (netto) Preis und Bestellnummer"
 
   date:
     formats:
@@ -203,6 +260,7 @@ de:
     distance_in_words:
       half_a_minute: 'eine halbe Minute'
       less_than_x_seconds:
+        zero: 'weniger als 1 Sekunde'
         one: 'weniger als eine Sekunde'
         other: 'weniger als %{count} Sekunden'
       x_seconds:

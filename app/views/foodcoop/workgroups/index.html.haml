@@ -1,10 +1,10 @@
-%h1 Arbeitsgruppen
+%h1= t("g.workgroups")
 
 %p
   %i
-    Das bearbeiten von Gruppen ist nur für Mitglieder der Gruppe möglich. 
+    = t("foodcoop.only_edit_groups_if_member")
     %br/
-    Wenn du einer Gruppe beitreten willst, dann schreib doch den Mitgliedern eine Nachricht.
+    = t("foodcoop.message_group_if_want_to_join")
       
 = render :partial => "workgroup", :collection => @workgroups
         

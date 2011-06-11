@@ -1,16 +1,15 @@
-- title "Gruppe bearbeiten"
-
+%h1= t("foodcoop.edit_group")
 %p
   %i
-    Mitglieder kannst du 
-    = link_to "hier", :action => "memberships", :id => @workgroup
-    hinzufügen.
+    = t("foodcoop.click_here_add_members1")
+    = link_to t("foodcoop.click_here_link_text"), :action => "memberships", :id => @workgroup
+    = t("foodcoop.click_here_add_members2")
 
 .edit_form{:style => "width:35em"}      
   - form_for [:foodcoop, @workgroup] do |@form|
     = render :partial => "shared/group_form"
 
     %p{:style => "clear:both"}
-      = submit_tag 'Speichern'
+      = submit_tag t("g.save")
       |
-      = link_to "Abbrechen", foodcoop_workgroups_path
+      = link_to t("g.cancel"), foodcoop_workgroups_path

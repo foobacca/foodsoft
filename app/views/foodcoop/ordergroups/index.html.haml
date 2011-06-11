@@ -1,16 +1,16 @@
-%h1 Bestellgruppen der Foodcoop
+%h1= t("foodcoop.ordergroups_title") 
 
 .left_column{:style => "width:100%"}
   .box_title
-    %h2 Übersicht
+    %h2= t("foodcoop.summary")
   .column_content
     #user_filter{:style => "margin-right:2em;"}
       %form{:id=>"sform", :action=>"", :style=>"display:inline;"}
-        %label{:for => 'article_name'} Suche nach Name:
+        %label{:for => 'article_name'}= t("g.search_by_name")
         = text_field_tag("query", params['query'], :size => 10 )
-        %label{:for => 'only_active'} Nur aktive:
+        %label{:for => 'only_active'}= t("foodcoop.only_active_groups")
         = check_box_tag('only_active')
-        %small (mindestens einmal in den letzten 3 Monaten bestellt)
+        %small= t("foodcoop.only_active_groups_explanation") 
 
         = observe_form 'sform', :frequency => 2, |
           :before => "Element.show('loader')", |
